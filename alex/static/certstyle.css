@@ -1,0 +1,37 @@
+body {
+    background-color: #084c43;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.cert-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cert-grid img:hover {
+    transform: scale(1.03);
+}

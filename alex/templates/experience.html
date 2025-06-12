@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Work Experience</title>
+        <link rel="stylesheet" href="{% static 'tables.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <h1>Work Experience</h1>
+
+        <table class="experience-table">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for exp in experience_data %}
+                <tr>
+                    <td data-label="Company">{{ exp.employer }}</td>
+                    <td data-label="Position">{{ exp.position }}</td>
+                    <td data-label="Start Date">{{ exp.start_date|date:"F Y" }}</td>
+                    <td data-label="End Date">{{ exp.end_date|date:"F Y" }}</td>
+                    <td data-label="Location">{{ exp.location }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </body>
+</html>

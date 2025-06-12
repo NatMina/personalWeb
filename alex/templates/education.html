@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Education</title>
+        <link rel="stylesheet" href="{% static 'tables.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <h1>Educational Background</h1>
+
+        <table class="experience-table">
+            <thead>
+                <tr>
+                    <th>Institution</th>
+                    <th>Qualification</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for edu in education_data %}
+                <tr>
+                    <td data-label="Company">{{ edu.institution_name }}</td>
+                    <td data-label="Position">{{ edu.cert }}</td>
+                    <td data-label="Start Date">{{ edu.start_date|date:"F Y"}}</td>
+                    <td data-label="End Date">{{ edu.end_date|date:"F Y"}}</td>
+                    <td data-label="Location">{{ edu.location }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </body>
+</html>

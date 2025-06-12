@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alemayehu Equar - Portfolio</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div>
+                <h1>Alemayehu Equar</h1>
+                <p>IT Professional</p>
+
+                <div class="tagline-box">
+                    Committed to Creating Value Through Technology
+                </div>
+            </div>
+            <div class="profile-img-wrapper">
+                <img src="{% static 'cover.jpg' %}" alt="Profile" class="profile-img">
+            </div>
+
+        </div>
+
+        <div class="right">
+            <div class="project-preview">
+                <img src="{% static 'alex_profile.png' %}" alt="Project Preview">
+            </div>
+
+            <div class="intro">
+                I'm a tech professional based in Toronto, Canada, passionate about data science, website development and digital solutions.
+                I specialize in data science, computer networks and IT infrastructures.
+            </div>
+            <div class="button-container">
+                <a href="{% url 'education' %}">
+                    <button>Education</button>
+                </a>
+                <button>Experience</button>
+                <button>Certifications</button>
+                <button>View Certificates</button>
+            </div>
+
+            <div class="contact">
+                <p>📧 Email: <a href="mailto:alemayehu.equar@gmail.com">alemayehu.equar@gmail.com</a></p>
+                <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/alemayehuequar" target="_blank">linkedin.com/in/alemayehuequar</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

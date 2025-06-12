@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles1.css' %}">
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-container h1 {
+            color: #0d4b45;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .about-container p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            text-align: center;
+            font-weight: 600;
+            font-style: italic;
+            color: #0d4b45;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Alex.</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'index1' %}">Home</a></li>
+                <li><a href="{% url 'education' %}">Education</a></li>
+                <li><a href="{% url 'experience' %}">Work Experience</a></li>
+                <li><a href="{% url 'certifications' %}">Certifications</a></li>
+                <li><a href="{% url 'viewcertification' %}">View Certification</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-container">
+        <h1>About Me</h1>
+        <div class="tagline">Reliable IT Expertise — From Infrastructure to Innovation.</div>
+
+        <p>
+            I’m an IT professional with hands-on experience across a wide range of technical domains — including system administration, network management, database handling, web design, and technical support.
+        </p>
+
+        <p>
+            Over the years, I’ve built and maintained systems that keep businesses running, supported users in solving day-to-day technical issues, and designed web solutions that are both functional and user-friendly.
+        </p>
+
+        <p>
+            My approach blends practical problem-solving with a continuous curiosity to learn and improve. Whether it’s troubleshooting a server, designing a clean user interface, or configuring a secure network, I bring a mindset focused on reliability, efficiency, and long-term value.
+        </p>
+    </div>
+
+</body>
+</html>

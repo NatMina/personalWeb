@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alemayehu | Portfolio</title>
+    <link rel="stylesheet" href="static/styles1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Alex.</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'index1' %}">Home</a></li>
+                <li><a href="{% url 'education' %}">Education</a></li>
+                <li><a href="{% url 'experience' %}">Work Experience</a></li>
+                <li><a href="{% url 'certifications' %}">Certifications</a></li>
+
+                <li><a href="{% url 'viewcertification' %}">View Certification</a></li>
+
+            </ul>
+        </nav>
+        <!--<a class="btn-cv" href="#">Download Resume</a>-->
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <p class="tagline">Reliable IT Expertise — From Infrastructure to Innovation.</p>
+            <h1>Committed to Creating Value Through Technology <br> </h1>
+                <h3> <span>Alemayehu E. Gebremariam</span> </h3>
+            <p class="description">I'm a tech professional based in Toronto, Canada, passionate about data science, website development and digital solutions.
+                I specialize in data science, computer networks and IT infrastructures.</p>
+            <div class="hero-buttons">
+                <a href="{% url 'aboutme' %}" class="btn-primary">About Me</a>
+                <!--<a href="#" class="btn-primary">&#9658; Contact Info</a>-->
+            </div>
+
+            <div class="contact-info">
+                <p><strong>📞</strong> <a href="tel:+1 (647) 677-8528">+1 (647) 677-8528</a></p>
+                <p><strong>✉️</strong> <a href="mailto:alemayehu.equar@gmail.com">alemayehu.equar@gmail.com</a></p>
+                <p><strong>🔗</strong> <a href="https://www.linkedin.com/in/alexequar" target="_blank">linkedin.com/in/alexequar</a></p>
+            </div>
+
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'alex_profile3.png' %}" alt="Alemayehu E.Gebremariam">
+        </div>
+    </section>
+</body>
+</html>
